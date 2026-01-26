@@ -1,0 +1,15 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="bipbop4x3" tvg-name="Bipbop 4x3" tvg-logo="https://developer.apple.com/assets/elements/icons/swift/swift-96x96.png" group-title="Apple Test Streams",Bipbop Classic (4x3)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8
+
+#EXTINF:-1 tvg-id="bipbop16x9" tvg-name="Bipbop 16x9" tvg-logo="https://developer.apple.com/assets/elements/icons/swift/swift-96x96.png" group-title="Apple Test Streams",Bipbop Widescreen (16x9)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9_variant/bipbop_16x9_variant.m3u8
+
+#EXTINF:-1 tvg-id="advanced-hls" tvg-name="Advanced HLS" tvg-logo="https://developer.apple.com/assets/elements/icons/avfoundation/avfoundation-96x96.png" group-title="Apple Test Streams",Advanced HLS (FMP4)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8
+
+#EXTINF:-1 tvg-id="dolby-atmos" tvg-name="Dolby Vision Atmos" tvg-logo="https://developer.apple.com/assets/elements/icons/avfoundation/avfoundation-96x96.png" group-title="Apple Test Streams",Dolby Vision + Atmos
+https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/main.m3u8
+
+#EXTINF:-1 tvg-id="historic-planet" tvg-name="Historic Planet 3D" tvg-logo="https://developer.apple.com/assets/elements/icons/reality-composer/reality-composer-96x96.png" group-title="Apple Test Streams",Historic Planet (3D Video)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/historic_planet_content_2023-10-26-3d-video/main.m3u8
