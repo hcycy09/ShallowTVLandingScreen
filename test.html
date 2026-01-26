@@ -53,6 +53,72 @@
                 </section>
 
                 <section>
+                    <h2>M3U File Contents</h2>
+                    <p>Below is the exact content of the <code>sample.m3u</code> file:</p>
+                    <pre style="background: #1a1a24; padding: 1.5rem; border-radius: 12px; overflow-x: auto; font-size: 0.85rem; line-height: 1.6; border: 1px solid #3f3f50;"><code style="color: #e4e4e7;">#EXTM3U
+#EXTINF:-1 tvg-id="bipbop4x3" tvg-name="Bipbop 4x3" tvg-logo="https://developer.apple.com/assets/elements/icons/swift/swift-96x96.png" group-title="Apple Test Streams",Bipbop Classic (4x3)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8
+
+#EXTINF:-1 tvg-id="bipbop16x9" tvg-name="Bipbop 16x9" tvg-logo="https://developer.apple.com/assets/elements/icons/swift/swift-96x96.png" group-title="Apple Test Streams",Bipbop Widescreen (16x9)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9_variant/bipbop_16x9_variant.m3u8
+
+#EXTINF:-1 tvg-id="advanced-hls" tvg-name="Advanced HLS" tvg-logo="https://developer.apple.com/assets/elements/icons/avfoundation/avfoundation-96x96.png" group-title="Apple Test Streams",Advanced HLS (FMP4)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8
+
+#EXTINF:-1 tvg-id="dolby-atmos" tvg-name="Dolby Vision Atmos" tvg-logo="https://developer.apple.com/assets/elements/icons/avfoundation/avfoundation-96x96.png" group-title="Apple Test Streams",Dolby Vision + Atmos
+https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/main.m3u8
+
+#EXTINF:-1 tvg-id="historic-planet" tvg-name="Historic Planet 3D" tvg-logo="https://developer.apple.com/assets/elements/icons/reality-composer/reality-composer-96x96.png" group-title="Apple Test Streams",Historic Planet (3D Video)
+https://devstreaming-cdn.apple.com/videos/streaming/examples/historic_planet_content_2023-10-26-3d-video/main.m3u8</code></pre>
+                </section>
+
+                <section>
+                    <h2>M3U Format Explained</h2>
+                    <p>An M3U playlist is a simple text file that contains a list of media streams. Here's how the format works:</p>
+
+                    <h3 style="margin-top: 1.5rem; font-size: 1.1rem;">Header</h3>
+                    <pre style="background: #1a1a24; padding: 1rem; border-radius: 8px; font-size: 0.85rem; border: 1px solid #3f3f50;"><code style="color: #6366f1;">#EXTM3U</code></pre>
+                    <p>Every M3U playlist starts with this header to identify the file format.</p>
+
+                    <h3 style="margin-top: 1.5rem; font-size: 1.1rem;">Entry Format</h3>
+                    <p>Each channel/stream has two lines:</p>
+                    <pre style="background: #1a1a24; padding: 1rem; border-radius: 8px; font-size: 0.85rem; border: 1px solid #3f3f50; overflow-x: auto;"><code style="color: #e4e4e7;"><span style="color: #6366f1;">#EXTINF:-1</span> <span style="color: #f59e0b;">tvg-id="..."</span> <span style="color: #10b981;">tvg-name="..."</span> <span style="color: #ec4899;">tvg-logo="..."</span> <span style="color: #0ea5e9;">group-title="..."</span>,<span style="color: #fff;">Display Name</span>
+<span style="color: #a78bfa;">https://stream-url.m3u8</span></code></pre>
+
+                    <h3 style="margin-top: 1.5rem; font-size: 1.1rem;">Attributes Breakdown</h3>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                        <tr style="border-bottom: 1px solid #3f3f50;">
+                            <td style="padding: 0.75rem; color: #6366f1; font-family: monospace;">#EXTINF:-1</td>
+                            <td style="padding: 0.75rem; color: #a1a1aa;">Extended info tag. <code>-1</code> means live stream (no duration).</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #3f3f50;">
+                            <td style="padding: 0.75rem; color: #f59e0b; font-family: monospace;">tvg-id</td>
+                            <td style="padding: 0.75rem; color: #a1a1aa;">Unique identifier for the channel</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #3f3f50;">
+                            <td style="padding: 0.75rem; color: #10b981; font-family: monospace;">tvg-name</td>
+                            <td style="padding: 0.75rem; color: #a1a1aa;">Channel name (used for matching)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #3f3f50;">
+                            <td style="padding: 0.75rem; color: #ec4899; font-family: monospace;">tvg-logo</td>
+                            <td style="padding: 0.75rem; color: #a1a1aa;">URL to the channel's logo image</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #3f3f50;">
+                            <td style="padding: 0.75rem; color: #0ea5e9; font-family: monospace;">group-title</td>
+                            <td style="padding: 0.75rem; color: #a1a1aa;">Category name for grouping channels</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #3f3f50;">
+                            <td style="padding: 0.75rem; color: #fff; font-family: monospace;">,Display Name</td>
+                            <td style="padding: 0.75rem; color: #a1a1aa;">Text after the comma is the display name shown in the app</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; color: #a78bfa; font-family: monospace;">URL (next line)</td>
+                            <td style="padding: 0.75rem; color: #a1a1aa;">The actual stream URL (HLS .m3u8, MP4, etc.)</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
                     <h2>How to Test</h2>
                     <ol>
                         <li>Open ShallowTV on your device</li>
@@ -82,6 +148,7 @@
                 <nav class="footer-links">
                     <a href="support.html">Support</a>
                     <a href="privacy.html">Privacy Policy</a>
+                    <a href="test.html">Sample Playlist</a>
                 </nav>
             </div>
             <p class="footer-copyright">&copy; 2025 ShallowTV. All rights reserved.</p>
