@@ -30,7 +30,7 @@
         <div class="container">
             <header class="legal-header">
                 <h1>Privacy Policy & Terms of Use</h1>
-                <p class="last-updated">Last updated: January 25, 2025</p>
+                <p class="last-updated">Last updated: February 9, 2026</p>
             </header>
 
             <article class="legal-content">
@@ -112,16 +112,35 @@
                 </section>
 
                 <section>
-                    <h2>Privacy - Data We Don't Collect</h2>
-                    <p>ShallowTV is designed with privacy in mind. We do not collect, store, or transmit any personal data to external servers. Specifically, we do not collect:</p>
+                    <h2>Privacy - Data We Collect</h2>
+                    <p>ShallowTV is designed with privacy in mind. We do not collect personal identification information such as your name, email, or account details. However, we use the following third-party services to help improve the app:</p>
+
+                    <h3>Firebase Analytics</h3>
+                    <p>We use Google Firebase Analytics to understand how users interact with the app in aggregate. This service collects:</p>
                     <ul>
-                        <li>Personal identification information</li>
-                        <li>Usage analytics or tracking data</li>
-                        <li>Device identifiers</li>
+                        <li><strong>Usage Data:</strong> App opens, screen views, and feature interactions</li>
+                        <li><strong>Device Information:</strong> Device model, operating system version, and app version</li>
+                        <li><strong>Anonymous Identifiers:</strong> A random app-instance identifier (not linked to your personal identity)</li>
+                    </ul>
+                    <p>This data is used solely for analytics purposes to improve the app experience. It is not linked to your identity and is not used for advertising or tracking across apps.</p>
+
+                    <h3>Firebase Crashlytics</h3>
+                    <p>We use Firebase Crashlytics to detect and fix app crashes. When a crash occurs, Crashlytics collects:</p>
+                    <ul>
+                        <li><strong>Crash Logs:</strong> Stack traces and error information</li>
+                        <li><strong>Device State:</strong> Device model, OS version, orientation, and available memory at the time of crash</li>
+                        <li><strong>App State:</strong> App version and the sequence of events leading to the crash</li>
+                    </ul>
+                    <p>Crash data is used solely to identify and fix bugs. It is not linked to your identity.</p>
+
+                    <h3>Data We Do Not Collect</h3>
+                    <p>We do not collect:</p>
+                    <ul>
+                        <li>Personal identification information (name, email, phone number)</li>
                         <li>Location data</li>
-                        <li>Browsing or viewing history</li>
-                        <li>Information about the content you access</li>
-                        <li>The URLs or playlists you add to the application</li>
+                        <li>Information about the content you access or the URLs you stream</li>
+                        <li>The playlists you add to the application</li>
+                        <li>Your viewing history or browsing habits</li>
                     </ul>
                 </section>
 
@@ -141,13 +160,23 @@
 
                 <section>
                     <h2>Network Requests</h2>
-                    <p>ShallowTV makes network requests only for:</p>
+                    <p>ShallowTV makes network requests for:</p>
                     <ul>
                         <li><strong>Fetching Playlists:</strong> From URLs you provide</li>
                         <li><strong>Streaming Content:</strong> From stream URLs in your playlists</li>
                         <li><strong>Loading Images:</strong> Logos and thumbnails from URLs in your playlists</li>
+                        <li><strong>Analytics & Crash Reporting:</strong> Anonymous usage and crash data sent to Google Firebase</li>
                     </ul>
-                    <p>All network requests go directly to URLs you have added. We do not operate any servers and have no visibility into these requests.</p>
+                    <p>Playlist, streaming, and image requests go directly to URLs you have added. Analytics and crash data are sent to Google Firebase servers. We do not operate our own data collection servers.</p>
+                </section>
+
+                <section>
+                    <h2>Third-Party Services</h2>
+                    <p>ShallowTV uses the following third-party services. Their use of your data is governed by their respective privacy policies:</p>
+                    <ul>
+                        <li><strong>Google Firebase Analytics:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a></li>
+                        <li><strong>Google Firebase Crashlytics:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a></li>
+                    </ul>
                 </section>
 
                 <section>
@@ -196,7 +225,7 @@
                     <a href="test.html">Sample Playlist</a>
                 </nav>
             </div>
-            <p class="footer-copyright">&copy; 2025 ShallowTV. All rights reserved.</p>
+            <p class="footer-copyright">&copy; 2026 ShallowTV. All rights reserved.</p>
         </div>
     </footer>
 </body>
