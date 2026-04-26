@@ -102,9 +102,9 @@ img {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--spacing-md) var(--spacing-lg);
+    max-width: none;
+    margin: 0;
+    padding: var(--spacing-md) var(--spacing-xl);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -141,6 +141,7 @@ img {
 
 .nav-links {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: var(--spacing-xl);
 }
@@ -154,6 +155,145 @@ img {
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--color-text);
+}
+
+.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-primary);
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.5rem 1.15rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    transition: background var(--transition), transform 0.15s;
+}
+
+.nav-cta:hover {
+    background: var(--color-primary-dark);
+    color: #fff !important;
+    transform: translateY(-1px);
+}
+
+/* Products dropdown */
+.nav-products { position: relative; }
+
+.nav-products-trigger {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 0.4rem 0.65rem 0.4rem 0.4rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background var(--transition);
+    letter-spacing: -0.02em;
+}
+
+.nav-trigger-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.nav-trigger-name span { color: var(--color-primary-light); }
+
+.nav-products-trigger:hover,
+.nav-products-trigger.open { background: rgba(255,255,255,0.08); }
+
+.nav-chevron { transition: transform 0.2s; opacity: 0.55; }
+.nav-products-trigger.open .nav-chevron { transform: rotate(180deg); }
+
+.nav-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    transform-origin: top left;
+    transform: translateY(-8px) scale(0.97);
+    min-width: 280px;
+    background: rgba(20, 20, 28, 0.98);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 0.5rem;
+    box-shadow: 0 16px 56px rgba(0,0,0,0.8), inset 0 0 0 0.5px rgba(255,255,255,0.04);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    z-index: 1100;
+}
+
+.nav-dropdown.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+}
+
+.nav-dropdown-children {
+    position: relative;
+    margin: 0.1rem 0 0 1.7rem;
+    padding-left: 1.1rem;
+}
+.nav-dropdown-children .nav-dropdown-item { position: relative; }
+.nav-dropdown-children .nav-dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: -1.1rem;
+    width: 1rem;
+    bottom: 50%;
+    border-left: 1.5px solid rgba(129,140,248,0.45);
+    border-bottom: 1.5px solid rgba(129,140,248,0.45);
+    border-bottom-left-radius: 6px;
+}
+.nav-dropdown-children .nav-dropdown-item + .nav-dropdown-item { margin-top: 0.35rem; }
+.nav-dropdown-children .nav-dropdown-item:nth-child(1)::before { top: -0.5rem; }
+.nav-dropdown-children .nav-dropdown-item:nth-child(2)::before { top: calc(-100% - 0.85rem); }
+
+.nav-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: background 0.15s;
+}
+
+.nav-dropdown-item:hover { background: rgba(255,255,255,0.08); color: #f0f0f0; }
+.nav-dropdown-item.active { background: rgba(129,140,248,0.14); color: #f0f0f0; }
+
+.nav-dropdown-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    object-fit: cover;
+}
+
+.nav-dropdown-item-text strong {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.01em;
+}
+
+.nav-dropdown-item-text span {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 0.1rem;
 }
 
 /* Buttons */

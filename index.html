@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ShallowTV - A modern, native IPTV and M3U playlist player for Apple platforms. Stream live TV and VOD content on macOS, iOS, iPadOS, tvOS, and visionOS.">
-    <meta name="keywords" content="IPTV, M3U, streaming, Apple TV, macOS, iOS, live TV, VOD">
-    <title>ShallowTV - Modern IPTV Player for Apple Devices</title>
+    <title>ShallowTV — Modern IPTV &amp; M3U Player for Apple Devices</title>
+    <meta name="description" content="ShallowTV is a modern, native IPTV and M3U playlist player for macOS, iOS, iPadOS, tvOS, and visionOS. Stream live TV and on-demand content across all your Apple devices.">
+    <meta name="keywords" content="IPTV, M3U, IPTV player, M3U player, Apple TV IPTV, macOS IPTV, iOS IPTV, live TV, VOD, Xtream Codes, EPG, tvOS IPTV, visionOS IPTV">
+    <meta name="author" content="ShallowApps">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f0f14">
+    <link rel="canonical" href="https://shallowtv.com/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="images/Icon.png">
+    <link rel="apple-touch-icon" href="images/Icon.png">
+
+    <!-- Apple smart banner -->
+    <meta name="apple-itunes-app" content="app-id=6757123182">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ShallowTV">
+    <meta property="og:title" content="ShallowTV — Modern IPTV &amp; M3U Player for Apple Devices">
+    <meta property="og:description" content="A modern, native IPTV and M3U playlist player for macOS, iOS, iPadOS, tvOS, and visionOS.">
+    <meta property="og:url" content="https://shallowtv.com/">
+    <meta property="og:image" content="https://shallowtv.com/images/AppScreenshot.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ShallowTV — Modern IPTV &amp; M3U Player for Apple Devices">
+    <meta name="twitter:description" content="Stream live TV and on-demand content across all your Apple devices.">
+    <meta name="twitter:image" content="https://shallowtv.com/images/AppScreenshot.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ShallowTV",
+      "operatingSystem": "macOS, iOS, iPadOS, tvOS, visionOS",
+      "applicationCategory": "MultimediaApplication",
+      "description": "A modern, native IPTV and M3U playlist player for Apple platforms.",
+      "url": "https://shallowtv.com/",
+      "image": "https://shallowtv.com/images/Icon.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ShallowApps",
+        "url": "https://shallowapps.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCJ209VWXH"></script>
     <script>
@@ -22,16 +71,46 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="images/transparentIcon.png" alt="ShallowTV" class="logo-icon-img">
-                <span>ShallowTV</span>
-            </a>
+            <div class="nav-products">
+                <button class="nav-products-trigger" id="products-trigger" aria-haspopup="menu" aria-expanded="false">
+                    <img src="images/transparentIcon.png" alt="" class="nav-trigger-icon">
+                    <span class="nav-trigger-name">Shallow<span>TV</span></span>
+                    <svg class="nav-chevron" width="11" height="11" viewBox="0 0 12 12" fill="none">
+                        <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="nav-dropdown" id="products-dropdown" role="menu">
+                    <a href="https://shallowapps.com" class="nav-dropdown-item">
+                        <img src="images/shallowapps-icon.png" alt="ShallowApps">
+                        <div class="nav-dropdown-item-text">
+                            <strong>ShallowApps</strong>
+                            <span>The studio</span>
+                        </div>
+                    </a>
+                    <div class="nav-dropdown-children">
+                        <a href="index.html" class="nav-dropdown-item active">
+                            <img src="images/transparentIcon.png" alt="ShallowTV">
+                            <div class="nav-dropdown-item-text">
+                                <strong>ShallowTV</strong>
+                                <span>Native IPTV player</span>
+                            </div>
+                        </a>
+                        <a href="https://shallowapps.com/streamline" class="nav-dropdown-item">
+                            <img src="images/streamline-icon.png" alt="Streamline">
+                            <div class="nav-dropdown-item-text">
+                                <strong>Streamline</strong>
+                                <span>M3U playlist editor</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#screenshots">Screenshots</a></li>
                 <li><a href="#platforms">Platforms</a></li>
-                <li><a href="#download">Download</a></li>
                 <li><a href="support.html">Support</a></li>
+                <li><a href="#download" class="nav-cta">Download Now</a></li>
             </ul>
         </div>
     </nav>
@@ -192,5 +271,17 @@
             <p class="footer-copyright">&copy; 2026 ShallowTV. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+    (function(){
+      var t=document.getElementById('products-trigger');
+      var d=document.getElementById('products-dropdown');
+      if(!t||!d) return;
+      function close(){ t.classList.remove('open'); d.classList.remove('open'); t.setAttribute('aria-expanded','false'); }
+      function open(){ t.classList.add('open'); d.classList.add('open'); t.setAttribute('aria-expanded','true'); }
+      t.addEventListener('click',function(e){ e.stopPropagation(); d.classList.contains('open')?close():open(); });
+      document.addEventListener('click',function(e){ if(!d.contains(e.target)&&!t.contains(e.target)) close(); });
+      document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+    })();
+    </script>
 </body>
 </html>
